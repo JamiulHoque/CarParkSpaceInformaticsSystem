@@ -1,7 +1,7 @@
 #!usr/bin/python3
 
 from application import app, db
-from application.models import Parent, Player
+from application.models import Carpark, Vehicle
 
 db.drop_all()
 db.create_all()
