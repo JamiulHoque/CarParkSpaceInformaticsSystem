@@ -1,0 +1,46 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+<table style="margin-left: 20px;">
+<!-- Table headers -->
+    <th>
+         <tr style="color: black; ">
+
+        <th>Registration</th>
+        <th>Make</th>
+        <th>Model</th>
+
+         </tr>
+    </th>
+
+{% for vehicle in query%}
+
+<tr>
+ <td>
+     {{vehicle.registration}}
+ </td>
+ <td>
+     {{vehicle.make}}
+ </td>
+ <td>
+     {{vehicle.model}}
+ </td>
+ <td>
+ <form action="{{url_for('delete', carpark_id=vehicle.carpark_id, id=vehicle.id)}}">
+             <input type=submit value="Delete Vehicle">
+ </form>
+ </td>
+ <td>
+	 <form action="{{url_for('edit', carpark_id=vehicle.carpark_id, id=vehcile.id)}}">
+	     <input type=submit value="Edit Vehicle">
+	 </form>
+ </td>
+</tr>
+
+{% endfor %}
+<br>
+ <form action="{{ url_for('vehicle', id=carpark.id) }}">
+      <input type=submit value="Add Vehicle">
+   </form>
+{% endblock body %}
