@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+Vehicle: {{ vehicleedit.registration }}
+<br>
+<form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        {{ form.registration.label }} {{ form.registration }}
+        <br>
+        {{ form.make.label }} {{ form.make }}
+        <br>
+        {{ form.model.label }} {{ form.model}}
+        <br>
+        {{ form.submit }}
+    {{ message }}
+    </form>
+
+{% endblock body %}
