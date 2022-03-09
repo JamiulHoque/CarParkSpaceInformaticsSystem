@@ -13,4 +13,5 @@ mysql -V
 
 echo ***MESSAGE FOR JAMIUL***MAKE SURE TO CHANGE THE IP ON SECURITY GROUP FOR RDS CONNECTION
 
-mysql -h database.cop4kgvc8v0g.eu-west-2.rds.amazonaws.com -P 3306 -u admin -p
+pip install -r requirements.txt
+
