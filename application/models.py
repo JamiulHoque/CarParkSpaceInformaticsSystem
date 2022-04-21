@@ -13,6 +13,7 @@ class Carpark(db.Model):
     capacity = db.Column(db.Integer, nullable=False)
     vehicles = db.relationship('Vehicle', backref='carpark')
 
+
 class Vehicle(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     registration = db.Column(db.String(50), nullable=False)
